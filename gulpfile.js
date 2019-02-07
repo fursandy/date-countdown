@@ -62,13 +62,13 @@ gulp.task('minify-js', () => {
 });
 
 gulp.task('connect', () => {
-  connect.server({base:'./example', port:8555, keepalive:true});
+  connect.server({base:'./', port:8555, keepalive:true});
 });
 
 gulp.task('bs', ['connect'], function() {
   bs.init({
       proxy:"localhost:8555",
-      baseDir: "./example",
+      baseDir: "./",
       open:true,
       notify:false
   });
