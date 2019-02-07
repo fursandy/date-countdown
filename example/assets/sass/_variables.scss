@@ -1,0 +1,54 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-base: 'Open Sans', sans-serif !default;
+$font-headings: 'Lato', sans-serif !default;
+
+
+//
+//== Colors
+//--------------------------------------------------
+
+$border-color: #e3e3e3 !default;
+$color-primary: #080957 !default;
+$color-secondary: #d8d8d8 !default;
+$color-black: #000  !default;
+$black: $color-black;
+
+$body-color: #fff !default;
+$text-color: #333 !default;
+$link-color: #0366d6 !default;
+
+
+/* Share Color
+------------------------------------------------------ */
+$facebook-color: #2d6abb !default;
+$twitter-color: #14b8db !default;
+$google-color: #e3411f !default;
+$youtube-color: #ca3737 !default;
+$linkedin-color: #0077b5 !default;
+$instagram-color: #125589 !default;
+$whatsapp-color: #4fce5d !default;
+$youtube-color: #fd0019 !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);

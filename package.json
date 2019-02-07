@@ -1,0 +1,36 @@
+{
+  "name": "vokatek-frontend",
+  "version": "1.0.0",
+  "description": "simple javascript library for creating date countdown",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fursandy",
+  "keywords": [
+    "javacript",
+    "library",
+    "date countdown",
+    "date counter"
+  ],
+  "main": "dist/js/date-counter.js",
+  "engines": {
+    "node": ">=7"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-uglify": "^3.0.1"
+  }
+}
