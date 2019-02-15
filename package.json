@@ -20,11 +20,11 @@
   "files": [
     "dist"
   ],
-  "repository": "fursandy/date-counter",
+  "repository": "fursandy/date-countdown",
   "author": "Fursandy Anggita <fursandyanggita@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fursandy/date-counter/issues"
+    "url": "https://github.com/fursandy/date-countdown/issues"
   },
-  "homepage": "https://github.com/fursandy/date-counter"
+  "homepage": "https://github.com/fursandy/date-countdown"
 }

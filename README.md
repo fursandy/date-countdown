@@ -1,4 +1,4 @@
-# DateCounter
+# Date Counter
 
 Simple lightweight Javascript's libraries to display countdowns date on websites.
 
