@@ -1,6 +1,6 @@
-export default class DateCounter {
+class DateCounter {
   /**
-   * Create a Siema.
+   * Create a DateCounter.
    * @param {Object} options - Optional settings object.
    */
   constructor(options) {
@@ -8,15 +8,16 @@ export default class DateCounter {
     this.selector = typeof this.config.selector === 'string' ? document.querySelector(this.config.selector) : this.config.selector;
 
     if (this.selector === null) {
-      throw new Error('Something wrong with your selector');
+      throw new Error('Selector undefinded');
     }
+
     return this.init();
   }
 
   static mergeSetting(options) {
     const settings = {
-      selector: '.event-countdown',
-      dateDistance: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
+      selector: '.date-counter',
+      dateDistance: '2020-01-01',
       timeDistance: '10:00',
     };
 
@@ -34,57 +35,66 @@ export default class DateCounter {
     const time = $this.getAttribute('data-time') ? $this.getAttribute('data-time') : this.config.timeDistance;
     const msec = Date.parse(`${date} ${time}`);
     const distance = new Date(msec);
-    const currentDate = new Date();
-    let result = [];
-    let day = null;
-    let hours = null;
-    let minutes = null;
-    let seconds = null;
-    let interval = null;
+    let currentDate = new Date();
 
-    const counter = () => {
-      if (distance - currentDate >= 0) {
+    if (distance - currentDate >= 0) {
+      const interval = window.setInterval(() => {
+        currentDate = new Date();
         const diff = (distance - currentDate) / 1000;
 
-        day = Math.floor(diff / (60 * 60 * 24));
-        hours = Math.floor((diff % (60 * 60 * 24)) / (60 * 60));
-        minutes = Math.floor((diff % (60 * 60)) / (60));
-        seconds = Math.floor(diff % 60);
-
+        const day = Math.floor(diff / (60 * 60 * 24));
+        let hours = Math.floor((diff % (60 * 60 * 24)) / (60 * 60));
+        let minutes = Math.floor((diff % (60 * 60)) / (60));
+        let seconds = Math.floor(diff % 60);
         hours = (`0 ${hours}`).slice(-2);
         minutes = (`0 ${minutes}`).slice(-2);
         seconds = (`0 ${seconds}`).slice(-2);
 
         if (diff >= 0) {
-          result = {
-            day: day,
-            hours: hours,
-            minutes: minutes,
-            seconds: seconds
-          };
+          $this.querySelectorAll('.date-counter__day')[0].innerHTML = day;
+          $this.querySelectorAll('.date-counter__hours')[0].innerHTML = hours;
+          $this.querySelectorAll('.date-counter__minutes')[0].innerHTML = minutes;
+          $this.querySelectorAll('.date-counter__seconds')[0].innerHTML = seconds;
 
-          return result;
+          const event = new CustomEvent('counter.change', {
+            bubbles: true,
+            detail: {
+              day: day,
+              hours: hours,
+              minutes: minutes,
+              seconds: seconds
+            }
+          });
+          $this.dispatchEvent(event);
         }
-        result = {
-          day: '--',
-          hours: '--',
-          minutes: '--',
-          seconds: '--'
-        };
-        window.clearInterval(interval);
-        return result;
-      }
-      result = {
-        day: '--',
-        hours: '--',
-        minutes: '--',
-        seconds: '--'
-      };
-      $this.classList.add('passed');
-
-      return result;
-    };
-
-    interval = window.setInterval(counter(), 1000);
+        else {
+          window.clearInterval(interval);
+        }
+      }, 1000);
+    }
   }
 }
+
+export default DateCounter;
+
+// Install function
+if (document.getElementsByClassName('date-counter').length) {
+  new DateCounter();
+}
+
+(function funcCustomEvent() {
+  if (typeof window.CustomEvent === 'function') { return false; }
+
+  function CustomEvent(event, params) {
+    params = params || {
+      bubbles: false,
+      cancelable: false,
+      detail: null
+    };
+    const evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  }
+  CustomEvent.prototype = window.Event.prototype;
+  window.CustomEvent = CustomEvent;
+})();

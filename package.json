@@ -1,7 +1,7 @@
 {
   "name": "date-counter",
   "version": "1.0.0",
-  "description": "Lightweight and simple carousel with no dependencies",
+  "description": "Simple Date Counter with no dependencies",
   "main": "dist/date-counter.min.js",
   "devDependencies": {
     "babel": "^6.23.0",
