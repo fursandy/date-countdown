@@ -1,5 +1,5 @@
 {
-  "name": "date-countdown",
+  "name": "fursandy-date-counter",
   "version": "1.0.0",
   "description": "Simple Date Counter with no dependencies",
   "main": "dist/date-counter.min.js",
@@ -20,11 +20,16 @@
   "files": [
     "dist"
   ],
-  "repository": "fursandy/date-countdown",
+  "repository": "fursandy/date-counter",
   "author": "Fursandy Anggita <fursandyanggita@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fursandy/date-countdown/issues"
+    "url": "https://github.com/fursandy/date-counter/issues"
   },
-  "homepage": "https://github.com/fursandy/date-countdown"
+  "homepage": "https://github.com/fursandy/date-counter",
+  "keywords": [
+    "date",
+    "counter",
+    "lightweight"
+  ]
 }
