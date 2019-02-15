@@ -17,7 +17,7 @@ import DateCounter from 'date-counter';
 or manually inject the minified script into your website.
 
 ```html
-<script src="DateCounter.min.js"></script>
+<script src="dist/date-counter.min.js"></script>
 ```
 
 ### Easy setup via data attributes HTML
