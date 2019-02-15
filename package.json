@@ -1,5 +1,5 @@
 {
-  "name": "date-counter",
+  "name": "date-countdown",
   "version": "1.0.0",
   "description": "Simple Date Counter with no dependencies",
   "main": "dist/date-counter.min.js",
