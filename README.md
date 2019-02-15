@@ -20,7 +20,7 @@ or manually inject the minified script into your website.
 <script src="DateCounter.min.js"></script>
 ```
 
-Easy setup via data attributes HTML
+### Easy setup via data attributes HTML
 
 ```html
 <div class="date-counter" data-date="2019-05-30" data-time="09:00">
@@ -31,7 +31,7 @@ Easy setup via data attributes HTML
 </div>
 ```
 
-Via JavaScript with default option values
+### Via JavaScript with default option values
 
 ```js
 new DateCounter({
@@ -41,7 +41,7 @@ new DateCounter({
 });
 ```
 
-On Change Events
+### On Change Events
 
 ```js
 document.getElementsByClassName('your-element')[0].addEventListener('counter.change', function(e) {
