@@ -1,6 +1,6 @@
 {
   "name": "fursandy-date-counter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Date Counter with no dependencies",
   "main": "dist/date-counter.min.js",
   "devDependencies": {

@@ -7,7 +7,7 @@ Simple lightweight Javascript's libraries to display countdowns date on websites
 If you are using a module bundler like Webpack or Browserify...
 
 ```
-npm add siema
+npm add fursandy-date-counter
 ```
 
 ```js
