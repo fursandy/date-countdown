@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Date Countdown</title>
-    <link rel="stylesheet" href="./example/dist/css/style.min.css">
+    <link rel="stylesheet" href="../example/dist/css/style.min.css">
 </head>
 <body>    
     <div class="container">
@@ -26,7 +26,7 @@
         </section>
     </div>
 
-    <script src="./dist/date-counter.min.js"></script>
-    <script src="./example/dist/js/script.js"></script>
+    <script src="../dist/date-counter.min.js"></script>
+    <script src="dist/js/script.js"></script>
 </body>
 </html>
