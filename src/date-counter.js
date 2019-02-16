@@ -69,8 +69,16 @@ class DateCounter {
         }
         else {
           window.clearInterval(interval);
+          $this.classList.add('counter-done');
+          const event = new CustomEvent('counter.complete');
+          $this.dispatchEvent(event);
         }
       }, 1000);
+    }
+    else {
+      $this.classList.add('counter-done');
+      const event = new CustomEvent('counter.complete');
+      $this.dispatchEvent(event);
     }
   }
 }

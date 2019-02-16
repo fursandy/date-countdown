@@ -1,5 +1,5 @@
 <?php 
-$html_demo = '<div class="countdown-box date-counter" data-date="2019-05-30" data-time="09:00">
+$html_demo = '<div class="countdown-box date-counter" data-date="2019-02-16" data-time="15:19">
 <div class="row">
     <div class="col">
         <div class="count-down__item">
