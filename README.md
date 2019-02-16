@@ -48,3 +48,11 @@ document.getElementsByClassName('your-element')[0].addEventListener('counter.cha
   console.log(e.detail.day, e.detail.hours, e.detail.minutes, e.detail.seconds);
 })
 ```
+
+### On Complete Events
+
+```js
+document.getElementsByClassName('date-counter')[0].addEventListener('counter.complete', function(e) {
+  console.log('complete datecounter');
+});
+```
