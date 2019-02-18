@@ -33,7 +33,7 @@ class DateCounter {
     const $this = this.selector;
     const date = $this.getAttribute('data-date') ? $this.getAttribute('data-date') : this.config.dateDistance;
     const time = $this.getAttribute('data-time') ? $this.getAttribute('data-time') : this.config.timeDistance;
-    const msec = Date.parse(`${date} ${time}`);
+    const msec = Date.parse(`${date}T${time}`);
     const distance = new Date(msec);
     let currentDate = new Date();
 
@@ -76,6 +76,7 @@ class DateCounter {
       }, 1000);
     }
     else {
+      console.log(distance, currentDate);
       $this.classList.add('counter-done');
       const event = new CustomEvent('counter.complete');
       $this.dispatchEvent(event);
