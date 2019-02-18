@@ -76,7 +76,6 @@ class DateCounter {
       }, 1000);
     }
     else {
-      console.log(distance, currentDate);
       $this.classList.add('counter-done');
       const event = new CustomEvent('counter.complete');
       $this.dispatchEvent(event);
