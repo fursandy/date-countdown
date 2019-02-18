@@ -52,7 +52,7 @@ document.getElementsByClassName('your-element')[0].addEventListener('counter.cha
 ### On Complete Events
 
 ```js
-document.getElementsByClassName('date-counter')[0].addEventListener('counter.complete', function(e) {
+document.getElementsByClassName('your-element')[0].addEventListener('counter.complete', function(e) {
   console.log('complete datecounter');
 });
 ```
