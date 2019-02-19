@@ -11,7 +11,9 @@ npm install fursandy-date-counter
 ```
 
 ```js
-import DateCounter from 'date-counter';
+import DateCounter from 'fursandy-date-counter';
+
+new DateCounter();
 ```
 
 or manually inject the minified script into your website.
